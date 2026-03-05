@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anshika Nigam | Full Stack Developer</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<style>
+/* skill cards */
+
+.skill-box{
+position:relative;
+padding:35px;
+border-radius:18px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+transition:0.4s;
+}
+
+.skill-box:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 0 30px rgba(168,85,247,0.5);
+border-color:#a855f7;
+}
+
+/* title */
+
+.skill-title{
+font-size:20px;
+font-weight:600;
+margin-bottom:20px;
+}
+
+/* skill tags */
+
+.skills-list{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.skills-list span{
+background:#1e293b;
+padding:8px 14px;
+border-radius:8px;
+font-size:13px;
+transition:0.3s;
+cursor:default;
+}
+
+.skills-list span:hover{
+background:linear-gradient(90deg,#6366f1,#a855f7);
+transform:translateY(-3px);
+box-shadow:0 0 12px #6366f1;
+}
+
+/* floating animation */
+
+.skill-box{
+animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+body{
+font-family:Poppins;
+background:#0b1120;
+color:white;
+overflow-x:hidden;
+}
+
+#particles{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+.gradient{
+background:linear-gradient(90deg,#f472b6,#c084fc);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav{
+background:rgba(10,15,30,0.7);
+backdrop-filter:blur(10px);
+}
+
+.hero-btn{
+padding:12px 28px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.hero-btn:hover{
+transform:translateY(-3px);
+}
+
+/* skills */
+
+.skill-card{
+background:#1e293b;
+padding:16px;
+border-radius:10px;
+text-align:center;
+font-size:14px;
+transition:0.3s;
+}
+
+.skill-card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 15px #6366f1;
+}
+
+.skill-category{
+background:#111827;
+padding:30px;
+border-radius:16px;
+}
+
+/* projects */
+
+.project-card{
+background:#1e293b;
+padding:26px;
+border-radius:14px;
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 20px #6366f1;
+}
+
+/* contact */
+
+.contact-input{
+width:100%;
+background:transparent;
+border-bottom:1px solid #334155;
+padding:12px;
+outline:none;
+}
+
+button{
+background:#6366f1;
+padding:12px 30px;
+border-radius:8px;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<!-- NAVBAR -->
+
+<nav class="fixed w-full top-0 z-50 py-4">
+
+<div class="max-w-7xl mx-auto flex justify-end px-6">
+
+<div class="space-x-6 hidden md:block">
+
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="min-h-[70vh] flex flex-col items-center justify-center text-center px-6">
+
+<h1 class="text-4xl md:text-6xl font-bold mb-6">
+
+Hi, I'm <span class="gradient">Anshika </span>
+
+</h1>
+
+<h2 class="text-xl md:text-2xl mb-6">
+
+<span id="typing"></span>
+
+</h2>
+
+<p class="text-gray-400 max-w-2xl mb-4">
+
+You have the vision for a stunning digital experience. I am the designer who can bring it to life.
+
+</p>
+
+<p class="text-gray-400 max-w-2xl">
+
+Full Stack Web & App Developer building scalable applications using Laravel, Flutter and modern frontend frameworks.
+
+</p>
+
+<div class="flex flex-wrap justify-center gap-4 mt-8">
+
+<a href="https://github.com/" target="_blank"
+class="hero-btn bg-indigo-600">
+
+GitHub
+
+</a>
+
+<a href="https://linkedin.com/in/anshika-nigam-2b10122a9"
+target="_blank"
+class="hero-btn border border-indigo-400">
+
+LinkedIn
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="py-20">
+
+<div class="max-w-5xl mx-auto text-center px-6">
+
+<h2 class="text-4xl font-bold gradient mb-10">
+
+About Me
+
+</h2>
+
+<p class="text-gray-400 leading-8 mb-6">
+
+I am a passionate Full Stack Developer with 1.5+ years of experience in building modern web and mobile applications. My expertise includes Laravel, Flutter, REST APIs and modern frontend frameworks like React and Next.js.
+
+</p>
+
+<p class="text-gray-400 leading-8 mb-6">
+
+I focus on building scalable architectures, optimizing performance and delivering intuitive user experiences. My goal is to transform ideas into powerful digital solutions that are reliable, efficient and visually engaging.
+
+</p>
+
+<p class="text-gray-400 leading-8">
+
+I have developed travel booking systems, donation platforms and corporate websites, always ensuring clean code practices and modern development standards.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="py-28">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<h2 class="text-4xl font-bold text-center gradient mb-20">
+Technical Skills
+</h2>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+<!-- Frontend -->
+
+<div class="skill-box">
+
+<h3 class="skill-title">Frontend</h3>
+
+<div class="skills-list">
+
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>React</span>
+<span>Next.js</span>
+<span>Tailwind</span>
+
+</div>
+
+</div>
+
+<!-- Backend -->
+
+<div class="skill-box">
+
+<h3 class="skill-title">Backend</h3>
+
+<div class="skills-list">
+
+<span>PHP</span>
+<span>Laravel</span>
+<span>REST API</span>
+<span>Authentication</span>
+
+</div>
+
+</div>
+
+<!-- Database -->
+
+<div class="skill-box">
+
+<h3 class="skill-title">Databases</h3>
+
+<div class="skills-list">
+
+<span>MySQL</span>
+<span>PostgreSQL</span>
+<span>MongoDB</span>
+<span>Redis</span>
+
+</div>
+
+</div>
+
+<!-- Tools -->
+
+<div class="skill-box">
+
+<h3 class="skill-title">Tools</h3>
+
+<div class="skills-list">
+
+<span>Git</span>
+<span>Docker</span>
+<span>Figma</span>
+<span>Canva</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" class="py-24">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<h2 class="text-4xl font-bold gradient mb-16 text-center">
+
+Projects
+
+</h2>
+
+<div class="grid md:grid-cols-3 gap-10">
+
+<div class="project-card">
+
+<h3 class="text-xl font-semibold mb-4">
+
+Tours & Travel Booking Platform
+
+</h3>
+
+<p class="text-gray-400">
+
+Dynamic booking platform built with Laravel and Tailwind CSS allowing users to browse packages and reserve tours.
+
+</p>
+
+</div>
+
+<div class="project-card">
+
+<h3 class="text-xl font-semibold mb-4">
+
+NGO Donation System
+
+</h3>
+
+<p class="text-gray-400">
+
+Donation management platform with secure authentication and REST API integration.
+
+</p>
+
+</div>
+
+<div class="project-card">
+
+<h3 class="text-xl font-semibold mb-4">
+
+Corporate Company Website
+
+</h3>
+
+<p class="text-gray-400">
+
+Optimized corporate website improving page load speed and responsiveness.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="py-24">
+
+<div class="max-w-3xl mx-auto px-6">
+
+<h2 class="text-4xl font-bold mb-8">
+
+Get in <span class="gradient">contact</span> and let's work together
+
+</h2>
+
+<p class="text-gray-400 mb-6">
+
+📧 anshika.nigam30@gmail.com  
+📱 +91 7082694983
+
+</p>
+
+<form id="contactForm" class="space-y-6">
+
+<input id="name" placeholder="Name" class="contact-input">
+
+<input id="email" placeholder="Email" class="contact-input">
+
+<input id="company" placeholder="Company" class="contact-input">
+
+<textarea id="message" placeholder="Message" class="contact-input"></textarea>
+
+<button type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer class="text-center py-6 text-gray-500">
+
+© 2026 Anshika Nigam • Full Stack Developer
+
+</footer>
+
+<script>
+
+/* typing animation */
+
+const roles=[
+"Full Stack Web Developer",
+"Frontend Developer",
+"Backend Developer",
+"App Developer"
+]
+
+let i=0,j=0,text=""
+
+function type(){
+
+if(j<roles[i].length){
+
+text+=roles[i][j]
+document.getElementById("typing").innerHTML=text
+j++
+setTimeout(type,70)
+
+}else{
+
+setTimeout(erase,1500)
+
+}
+
+}
+
+function erase(){
+
+if(j>0){
+
+text=text.slice(0,-1)
+document.getElementById("typing").innerHTML=text
+j--
+setTimeout(erase,40)
+
+}else{
+
+i++
+if(i>=roles.length)i=0
+setTimeout(type,200)
+
+}
+
+}
+
+type()
+
+/* whatsapp form */
+
+document.getElementById("contactForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault()
+
+let name=document.getElementById("name").value
+let email=document.getElementById("email").value
+let company=document.getElementById("company").value
+let message=document.getElementById("message").value
+
+let text=`Hello Anshika
+Name:${name}
+Email:${email}
+Company:${company}
+Message:${message}`
+
+window.open(`https://wa.me/917082694983?text=${encodeURIComponent(text)}`)
+
+})
+
+/* particles */
+
+tsParticles.load("particles",{
+particles:{
+number:{value:70},
+size:{value:2},
+move:{speed:1},
+color:{value:"#94a3b8"}
+}
+})
+
+</script>
+
+</body>
+</html>
